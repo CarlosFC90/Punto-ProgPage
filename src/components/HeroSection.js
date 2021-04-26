@@ -7,7 +7,7 @@ function HeroSection() {
     return (
         <div className="hero-container">
             <video src='/videos/video-2.mp4' autoPlay loop muted />
-            <h1>You solution is here</h1>
+            <h1>Your solution is here</h1>
             <p>What are you waiting for?</p>
             <div className='hero-btns'>
                 <Button 
@@ -15,7 +15,7 @@ function HeroSection() {
                     buttonStyle='btn--primary' 
                     buttonSize='btn--large'
                 >
-                    SEE US PROYECTS <i className="fas fa-chevron-right"></i>
+                    SEE THE PROJECTS <i className="fas fa-chevron-right"></i>
                 </Button>
             </div>
         </div>

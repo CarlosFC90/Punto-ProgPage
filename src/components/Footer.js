@@ -12,7 +12,7 @@ const Footer = () => {
                 <div className='row'>
                     <div className='footer-col'>
                         <Link to='/' style={{textDecoration: 'none'}}><h2>Punto-Prog &nbsp; <i className="fas fa-laptop-code"></i></h2></Link>
-                        <h5>You solution is here!</h5>
+                        <h5>Your solution is here!</h5>
                         <h5>Punto-Prog &copy;{new Date().getFullYear()}</h5>
                     </div>
                     <div className='footer-col'>
