@@ -25,6 +25,10 @@
     color: rgb(255, 255, 255);
 }
 
+.container-form {
+    margin-top: 10px;
+}
+
 @media screen and (max-width: 960px) {
     .banner-container h1 {
         font-size: 70px;
