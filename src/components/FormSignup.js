@@ -10,7 +10,7 @@ function FormSignup({submitForm}) {
             <form className='form' onSubmit={handleSubmit}>
                 <h1>Contact for us services</h1>
                 <div className='row'>
-                    <div className='col-md-6 form-input-row'>
+                    <div className='form-input-row'>
                         <label htmlFor='name'>Nombre: &nbsp;</label>
                         <input 
                             type='text'
@@ -23,7 +23,7 @@ function FormSignup({submitForm}) {
                         />
                         {errors.name && <p>{errors.name}</p>}
                     </div>
-                    <div className='col-md-6 form-input-row'>
+                    <div className='form-input-row'>
                         <label htmlFor='email'>Email: &nbsp;</label>
                         <input 
                             type='email'
@@ -43,14 +43,14 @@ function FormSignup({submitForm}) {
                         type='text'
                         className='form-input' 
                         name='description' 
-                        placeholder='Escriba aquí su pedido'
+                        placeholder='Escriba aquí su consulta'
                         id='description'
                         value={values.description}
                         onChange={handleChange}
                     />
                     {errors.description && <p>{errors.description}</p>}
                 </div>
-                <button className='form-input-button' type="submit">Enviar</button>
+                <button className='form-input-button btn-primary' type="submit">Enviar</button>
             </form>
         </div>
     )
