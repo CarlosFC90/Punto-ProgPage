@@ -1,0 +1,75 @@
+.cards_carousel_item {
+  display: flex;
+  flex: 1;
+  margin: 0 1rem;
+  border-radius: 10px;
+  width: 300px;
+}
+  
+.cards_carousel_item_link {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  box-shadow: 10px 10px 10px rgba(9, 94, 252, 0.17);
+  -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+}
+  
+.cards_carousel_item_pic-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 67%;
+  overflow: hidden;
+  font-size: 10px;
+}
+  
+.fade-img {
+  animation-name: fade-img;
+  animation-duration: 2s;
+}
+  
+.cards_carousel_item_img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  transition: all 0.2s linear;
+}
+  
+.cards_carousel_item_img:hover {
+  transform: scale(1.1);
+}
+  
+.cards_carousel_item_info {
+  padding: 20px 30px 30px;
+  background-color: white;
+}
+  
+.cards_carousel_item_text {
+  color: #252e48;
+  font-size: 24px;
+  line-height: 24px;
+}
+  
+@media only screen and (min-width: 1200px) {
+  
+}
+  
+@media only screen and (min-width: 1024px) {
+  
+}
+  
+@media only screen and (max-width: 1024px) {
+  
+}
+
