@@ -5,6 +5,70 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+import imageZero3D from '../../images/zero3d.jpg';
+import imageWeb1 from '../../images/web-development.jpg';
+import imageWeb2 from '../../images/web-development.jpg';
+import imageWeb3 from '../../images/web-development.jpg';
+
+import imageTelomando from '../../images/telomando.png';
+import imageMobile1 from '../../images/mobile-development.png';
+import imageMobile2 from '../../images/mobile-development.png';
+import imageMobile3 from '../../images/mobile-development.png';
+
+const cardsWeb = [
+    {
+        id: 1,
+        title: 'Zero3D',
+        image: imageZero3D,
+        url: 'https://zero3d.com.ar'
+    },
+    {
+        id: 2,
+        title: 'Proyecto 1',
+        image: imageWeb1,
+        url: 'https://google.com.ar'
+    },
+    {
+        id: 3,
+        title: 'Proyecto 2',
+        image: imageWeb2,
+        url: 'https://facebook.com.ar'
+    },
+    {
+        id: 4,
+        title: 'Proyecto 3',
+        image: imageWeb3,
+        url: 'https://instagram.com.ar'
+    }
+];
+
+const cardsMobile = [
+    {
+        id: 1,
+        title: 'Telomando Olavarría',
+        image: imageTelomando,
+        url: 'https://google.com.ar'
+    },
+    {
+        id: 2,
+        title: 'Proyecto 1',
+        image: imageMobile1,
+        url: 'https://google.com.ar'
+    },
+    {
+        id: 3,
+        title: 'Proyecto 2',
+        image: imageMobile2,
+        url: 'https://facebook.com.ar'
+    },
+    {
+        id: 4,
+        title: 'Proyecto 3',
+        image: imageMobile3,
+        url: 'https://instagram.com.ar'
+    }
+];
+
 const Services = () => {
 
     let settingsWeb = {
@@ -102,74 +166,35 @@ const Services = () => {
                 <h1><u><i>Web</i></u></h1>
                 <div className='container'>
                     <Slider {...settingsWeb}>
-                        <div className='item'>
-                            <CardCarousel
-                                src="images/zero3d.jpg"
-                                text="Zero3D"
-                                url="https://www.google.com"
-                            />
-                        </div>
-                        <div className='item'>
-                            <CardCarousel
-                                src="images/web-development.jpg"
-                                text="Explore our Web projects"
-                            />
-                        </div>
-                        <div className='item'>
-                            <CardCarousel
-                                src="images/web-development.jpg"
-                                text="Explore our Web projects"
-                            />
-                        </div>
-                        <div className='item'>
-                            <CardCarousel
-                                src="images/web-development.jpg"
-                                text="Explore our Web projects"
-                            />
-                        </div>
-                        <div className='item'>
-                            <CardCarousel
-                                src="images/web-development.jpg"
-                                text="Explore our Web projects"
-                            />
-                        </div>
+                        {
+                            cardsWeb.map((card) => (
+                                <div className='item' key={card.id}>
+                                    <CardCarousel
+                                        srcImage={card.image}
+                                        title={card.title}
+                                        url={card.url}
+                                    />
+                                </div>
+                            ))
+                        }
                     </Slider>
                 </div>
             </div>
             <div className='mobile-works'>
                 <h1><u><i>Mobile</i></u></h1>
                 <div className='container'>
-                    <Slider {...settingsMobile}>
-                        <div className='item'>
-                            <CardCarousel
-                                src="images/telomando.png"
-                                text="Telomando Olavarría"
-                            />
-                        </div>
-                        <div className='item'>
-                            <CardCarousel
-                                src="images/mobile-development.png"
-                                text="Explore our Mobile projects"
-                            />
-                        </div>
-                        <div className='item'>
-                            <CardCarousel
-                                src="images/mobile-development.png"
-                                text="Explore our Mobile projects"
-                            />
-                        </div>
-                        <div className='item'>
-                            <CardCarousel
-                                src="images/mobile-development.png"
-                                text="Explore our Mobile projects"
-                            />
-                        </div>
-                        <div className='item'>
-                            <CardCarousel
-                                src="images/mobile-development.png"
-                                text="Explore our Mobile projects"
-                            />
-                        </div>
+                <Slider {...settingsMobile}>
+                        {
+                            cardsMobile.map((cardMobile) => (
+                                <div className='item' key={cardMobile.id}>
+                                    <CardCarousel
+                                        srcImage={cardMobile.image}
+                                        title={cardMobile.title}
+                                        url={cardMobile.url}
+                                    />
+                                </div>
+                            ))
+                        }
                     </Slider>
                 </div>
             </div>

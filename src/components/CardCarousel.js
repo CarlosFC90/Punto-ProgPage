@@ -1,20 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './styles/CardCarousel.css'
 
-function CardCarousel(props) {
+function CardCarousel({title, srcImage, url}) {
     return (
         <div>
             <>
                 <li className='cards_carousel_item'>
-                    <Link className='cards_carousel_item_link' target='_blank'>
+                    <div className='cards_carousel_item_link'>
                         <figure className='cards_carousel_item_pic-wrap'>
-                            <img src={props.src} alt='Work Img' className='cards_carousel_item_img'/>                        
+                            <img src={srcImage} alt='Work Img' className='cards_carousel_item_img'/>                        
                         </figure>
                         <div className='cards_carousel_item_info'>
-                            <h5 className='cards_carousel_item_text'>{props.text}</h5>
+                            <a href={url} target='_blank' style={{textDecoration: 'none'}}><h5 className='cards_carousel_item_text'>{title}</h5></a>
                         </div>
-                    </Link>
+                    </div>
                 </li>  
             </>
         </div>
